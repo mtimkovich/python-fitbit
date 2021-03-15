@@ -20,6 +20,8 @@ if __name__ == '__main__':
         latest = [d['value'] for d in dataset[-16:]]
 
         with open('maxs-hr.txt', 'w') as f:
-            f.write('{}–{}'.format(min(latest), max(latest)))
+            output = '{}–{}'.format(min(latest), max(latest))
+            print(output)
+            f.write(output)
 
         time.sleep(60)

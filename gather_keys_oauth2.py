@@ -78,6 +78,7 @@ class OAuth2Server:
         """ Shutdown cherrypy in one second, if it's running """
         if cherrypy.engine.state == cherrypy.engine.states.STARTED:
             threading.Timer(1, cherrypy.engine.exit).start()
+        cherrypy.engine.exit()
 
 
 if __name__ == '__main__':
